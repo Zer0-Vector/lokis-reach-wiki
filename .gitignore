@@ -1,1 +1,9 @@
 node_modules/
+
+todo.txt
+report.txt
+done.txt
+*.todo.txt
+sheets/
+notes/
+.vscode/
