@@ -1,0 +1,5 @@
+theme: jekyll-theme-minimal
+permalink: pretty
+collections:
+  planets:
+    output: true

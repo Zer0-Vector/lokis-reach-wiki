@@ -4,7 +4,13 @@ todo.txt
 report.txt
 done.txt
 *.todo.txt
-sheets/
-notes/
 .vscode/settings.json
-out/
+
+# session notes
+.notes/
+
+# previous experiments
+.archive/
+
+# character sheets
+.sheets/
