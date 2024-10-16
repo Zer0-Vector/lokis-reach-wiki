@@ -1,6 +1,12 @@
 theme: jekyll-theme-minimal
 permalink: pretty
 baseurl: "lokis-reach-wiki"
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
 collections:
   planets:
     output: true
