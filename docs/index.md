@@ -4,4 +4,4 @@
 ## Planets
 - [A planet][exp]
 
-[exp]: {% link planets/example.md %}
+[exp]: {% link _planets/example.md %}
