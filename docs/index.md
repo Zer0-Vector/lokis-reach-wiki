@@ -1,3 +1,6 @@
+---
+title: Loki's Reach Wiki
+---
 
 > Coming soon...
 
