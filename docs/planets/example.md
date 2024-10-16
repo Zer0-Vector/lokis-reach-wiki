@@ -1,3 +1,3 @@
 # Example Planet
 
-Test 123
+Test 123: *{{ page.collections }}*
