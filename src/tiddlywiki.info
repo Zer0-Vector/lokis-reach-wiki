@@ -1,10 +1,9 @@
 {
-    "description": "Basic client-server edition",
     "plugins": [
-        "tiddlywiki/tiddlyweb",
-        "tiddlywiki/filesystem",
-        "tiddlywiki/highlight"
     ],
+    "config": {
+      "retain-original-tiddler-path": true
+    },
     "themes": [
         "tiddlywiki/vanilla",
         "tiddlywiki/snowwhite"
@@ -12,8 +11,47 @@
     "build": {
         "index": [
             "--render",
-            "$:/plugins/tiddlywiki/tiddlyweb/save/offline",
+            "$:/core/save/all",
             "index.html",
+            "text/plain"
+        ],
+        "empty": [
+            "--render",
+            "$:/core/save/all",
+            "empty.html",
+            "text/plain",
+            "--render",
+            "$:/core/save/all",
+            "empty.hta",
+            "text/plain"
+        ],
+        "emptyexternalcore": [
+            "--render",
+            "$:/core/save/offline-external-js",
+            "empty-external-core.html",
+            "text/plain",
+            "--render",
+            "$:/core/templates/tiddlywiki5.js",
+            "[[tiddlywikicore-]addsuffix<version>addsuffix[.js]]",
+            "text/plain"
+        ],
+        "externalimages": [
+            "--savetiddlers",
+            "[is[image]]",
+            "images",
+            "--setfield",
+            "[is[image]]",
+            "_canonical_uri",
+            "$:/core/templates/canonical-uri-external-image",
+            "text/plain",
+            "--setfield",
+            "[is[image]]",
+            "text",
+            "",
+            "text/plain",
+            "--render",
+            "$:/core/save/all",
+            "externalimages.html",
             "text/plain"
         ],
         "static": [

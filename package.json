@@ -8,7 +8,8 @@
   },
   "author": "Zer0-Vector <77898583+Zer0-Vector@users.noreply.github.com>",
   "scripts": {
-    "build": "tiddlywiki src --output ./wiki --build index",
+    "build": "tiddlywiki src --verbose --output ./wiki --build index",
+    "local": "tiddlywiki src --verbose --output ./out --build index",
     "launch": "tiddlywiki src --listen"
   },
   "bugs": {
