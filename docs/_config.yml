@@ -1,6 +1,10 @@
+title: Loki's Reach Wiki
+description: >
+  Sector information and rules reference.
+show_downloads: false
 theme: jekyll-theme-minimal
 permalink: pretty
-baseurl: "lokis-reach-wiki"
+baseurl: lokis-reach-wiki
 defaults:
   -
     scope:
@@ -9,4 +13,6 @@ defaults:
       layout: default
 collections:
   planets:
+    output: true
+  rules:
     output: true
