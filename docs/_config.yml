@@ -1,10 +1,42 @@
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
 title: Loki's Reach Wiki
-description: >
+email: 77898583+Zer0-Vector@users.noreply.github.com
+description: >-
   Sector information and rules reference.
-show_downloads: false
+
+# GitHub Pages settings
+domain: zer0-vector.github.io
+url: https://zer0-vector.github.io
+github_username: Zer0-Vector
+repository: Zer0-Vector/lokis-reach-wiki
+
+# Build settings
 theme: jekyll-theme-minimal
+show_downloads: false
+# XXX: not sure if this is needed
+# remote_theme: pages-themes/minimal@v0.2.0
+# plugins:
+# - jekyll-remote-theme
+baseurl: /lokis-reach-wiki
+
 permalink: pretty
-baseurl: lokis-reach-wiki
 defaults:
   -
     scope:
@@ -16,3 +48,15 @@ collections:
     output: true
   rules:
     output: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

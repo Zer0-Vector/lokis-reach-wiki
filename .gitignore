@@ -14,3 +14,6 @@ done.txt
 
 # character sheets
 .sheets/
+
+# jekyll temp
+.j/
