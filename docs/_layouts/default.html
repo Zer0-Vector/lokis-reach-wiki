@@ -25,19 +25,22 @@
         <section>
           {% if page.title or page.description %}
             <header>
-          {% if page.title %}
-            <h1>{{ page.title }}</h1>
-          {% endif  %}
+              {% if page.title %}
+                <h1>{{ page.title }}</h1>
+              {% endif  %}
               {% if page.description %}
                 <p>{{ page.description }}</p>
               {% endif %}
             </header>
-              {% endif %}
-        {{ content }}
+          {% endif %}
+          {{ content }}
         </section>
       </main>
       <footer>
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
+          {% if site.time %}
+            &mdash; Last updated <time datetime="{{ site.time | date_to_xmlschema }}" title="{{ site.time | date_to_rfc822 }}">{{ site.time | date_to_long_string: "ordinal","US" }}</time></p>
+          {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme based on <strong><a href="https://github.com/pages-themes/minimal">minimal</a></strong> by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
