@@ -1,3 +1,98 @@
-.wrapper {
-  background-color: aliceblue;
+:root {
+  color-scheme: light dark;
+
+  --clr-text-l: #555;
+  --clr-text-d: #ccc;
+  --text-color: light-dark(var(--clr-text-l), var(--clr-text-d));
+  --bg-color: unset;
+  --heading-color-adj: 23; /* relative difference in brightness (hsb) between text and heading colors */
+  --clr-hx-ll: min(0, calc(l - var(--heading-color-adj)));
+  --clr-hx-ld: max(calc(l + var(--heading-color-adj)), 100);
+  --l-h-color: hsl(from var(--clr-text-l) h s var(--clr-hx-ll));
+  --d-h-color: hsl(from var(--clr-text-d) h s var(--clr-hx-ld));
+  --heading-color: light-dark(var(--l-h-color), var(--d-h-color));
+  --clr-link-l: #267CB9;
+  --clr-hlink-l: #003c66;
+  --clr-link-d: #AAD3EE;
+  --clr-hlink-d: #0A99FF;
+  --link-color: light-dark(var(--clr-link-l), var(--clr-link-d));
+  --hlink-color: light-dark(var(--clr-hlink-l), var(--clr-hlink-d));
 }
+
+body {
+  background-color: var(--bg-color);
+  padding: 0 50px;
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  height: 100%;
+  font-weight: 400;
+  font-size: 1rem;
+
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+header,
+section,
+footer {
+  width: unset;
+  float: unset;
+  position: unset;
+  padding: 2rem;
+}
+
+.wrapper > * {
+  min-height: inherit;
+  height: inherit;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  min-height: inherit;
+  height: inherit;
+}
+
+.wrapper footer {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin: auto;
+  width: 100%;
+  min-width: max-content;
+  min-height: fit-content;
+  max-height: max-content;
+  grid-column: 1 / span 2;
+}
+
+.wrapper footer p {
+  margin: auto;
+}
+
+a, a:hover, a:focus {
+  font-weight: unset;
+}
+
+a {
+  color: var(--link-color);
+  transition-property: color, transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  display: inline-block;
+}
+
+a:hover, a:focus {
+  color: var(--hlink-color);
+  transform: scale(1.06);
+}
+
