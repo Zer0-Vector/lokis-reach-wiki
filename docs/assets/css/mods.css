@@ -36,10 +36,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
 }
 
-h1 {
-  font-size: 2em;
-}
-
 header,
 section,
 footer {
@@ -73,10 +69,15 @@ footer {
   min-height: fit-content;
   max-height: max-content;
   grid-column: 1 / span 2;
+  font-size: 75%;
 }
 
 .wrapper footer p {
   margin: auto;
+}
+
+.wrapper footer time {
+  font-weight: 700;
 }
 
 a, a:hover, a:focus {
@@ -93,6 +94,6 @@ a {
 
 a:hover, a:focus {
   color: var(--hlink-color);
-  transform: scale(1.06);
+  transform: scale(1.05) translateY(calc(-0.2 * 1ch));
 }
 
