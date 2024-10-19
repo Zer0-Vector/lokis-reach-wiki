@@ -5,31 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 {% seo %}
+{% include fonts.htmf %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/mods.css?v=" | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
     <div class="wrapper">
-      <nav>
-        <header>
-          <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-
-          {% if site.logo %}
-            <img src="{{site.logo | relative_url}}" alt="Logo" />
-          {% endif %}
-
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-        </header>
-      </nav>
+      {% include sidebar.htmf %}
       <main>
         <section>
           {% if page.title or page.description %}
             <header>
               {% if page.title %}
                 <h1>{{ page.title }}</h1>
+                {% assign desc_attr = 'class="subhead"' %}
               {% endif  %}
               {% if page.description %}
-                <p>{{ page.description }}</p>
+                <p {{ desc_attr }}>{{ page.description }}</p>
+              {% endif %}
+              {% if page.tags %}
+                <ul class="tags">
+                  {% for t in page.tags %}
+                    <li>{{ t }}</li>
+                  {% endfor %}
+                </ul>
               {% endif %}
             </header>
           {% endif %}
@@ -45,5 +44,6 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/nav.js" | relative_url }}"></script>
   </body>
 </html>
