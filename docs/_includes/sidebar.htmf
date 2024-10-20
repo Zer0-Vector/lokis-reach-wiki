@@ -7,15 +7,21 @@
 
   <p class="subhead">{{ site.description | default: site.github.project_tagline }}</p>
   {% unless site.collections.size == 0 %}
-    {% assign colls = site.collections |  where_exp: "c","c.label != 'posts'"  %}
+    {% assign colls = site.collections |  where_exp: "c","c.output"  %}
     <hr />
     <nav>
       <ul>
         {% for c in colls %}
-          {% capture href -%}
-            /{{ c.label }}
-          {%- endcapture %}
-          <li><a href="{{ href | relative_url }}">{{ c.label |  capitalize }}</a></li>
+          {% if c.label == "posts" %}
+            {% continue %}
+          {% endif %}
+          <li><a href="{{ c.label | relative_url }}">
+          {%- if site.data.collections.labels[c.label] -%}
+            {{ site.data.collections.labels[c.label] }}
+          {%- else -%}
+            {{ c.label | capitalize | append: 's' }}
+          {%- endif -%}
+          </a></li>
         {% endfor %}
       </ul>
     </nav>
