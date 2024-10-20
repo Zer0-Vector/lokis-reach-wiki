@@ -35,13 +35,7 @@
           {{ content }}
         </section>
       </main>
-      <footer>
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
-          {% if site.time %}
-            &mdash; Last updated <time datetime="{{ site.time | date_to_xmlschema }}" title="{{ site.time | date_to_rfc822 }}">{{ site.time | date_to_long_string: "ordinal","US" }}</time></p>
-          {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme based on <strong><a href="https://github.com/pages-themes/minimal">minimal</a></strong> by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+      {% include footer.htmf %}
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/nav.js" | relative_url }}"></script>
