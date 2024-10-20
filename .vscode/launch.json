@@ -1,0 +1,28 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Jekyll",
+      "url": "http://localhost:4000/lokis-reach-wiki/",
+      "webRoot": "${workspaceFolder}/docs/_site",
+      "urlFilter": "http://(localhost|127\\.0\\.0\\.1):4000/lokis-reach-wiki/.*",
+      "preLaunchTask": "Start Jekyll",
+      "postDebugTask": "Stop Jekyll",
+      "outFiles": [
+        "${workspaceFolder}/docs/_site/**/*"
+      ],
+      "cleanUp": "onlyTab",
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "killOnServerStop": false,
+        "webRoot": "${workspaceFolder}/docs/_site",
+        "pattern": "Server address: http://127.0.0.1:([0-9]+).*"
+      },
+    }
+  ]
+}

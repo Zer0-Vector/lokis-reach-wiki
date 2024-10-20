@@ -1,0 +1,76 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "presentation": {
+    "reveal": "silent",
+    "panel": "dedicated",
+    "showReuseMessage": false,
+    "revealProblems": "onProblem",
+    "group": "Jekyll",
+    "close": true,
+    "clear": true,
+  },
+  "runOptions": {
+    "instanceLimit": 1
+  },
+  "group": "none",
+  "problemMatcher": {
+    "background": {
+      "beginsPattern": "^\\s*Regenerating:.*",
+      "endsPattern": "^\\s*Jekyll Feed: Generating feed for posts"
+    },
+    "fileLocation": [
+      "relative",
+      "${workspaceFolder}/docs"
+    ],
+    "applyTo": "allDocuments",
+    "pattern": [
+      {
+        "regexp": "^\\s*Liquid Exception:\\s+Liquid .+ (\\S+) \\(line (\\d+)\\): (.*) in (/.+)$",
+        "line": 2,
+        "file": 4,
+        "message": 3,
+        "severity": 1
+      }
+    ]
+  },
+  "options": {
+    "cwd": "${workspaceFolder}/docs"
+  },
+  "tasks": [
+    {
+      "label": "Start Jekyll",
+      "detail": "Starts Jekyll server locally",
+      "type": "shell",
+      "command": "bundle exec jekyll serve --incremental",
+      "isBackground": true,
+    },
+    {
+      "label": "Stop Jekyll",
+      "detail": "Stops a local Jekyll server",
+      "type": "shell",
+      "command": ["\".\\JekyllControl.ps1\"",
+        "-Terminate"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "powershell",
+          "args": ["-command"]
+        }
+
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build site",
+      "detail": "Builds Jekyll site",
+      "type": "shell",
+      "command": "bundle exec jekyll build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
