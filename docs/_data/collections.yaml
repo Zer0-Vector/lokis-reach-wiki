@@ -1,0 +1,17 @@
+# Collection overrides/properties
+
+# label overrides (not currently capitalized in template)
+labels:
+  asteroid-belt: Asteroid Belts
+  species: Species
+  rules: Rules
+
+# collection item prefixes
+prefixes:
+  district: District
+
+# items without a mapid
+nomap:
+  - district
+  - species
+  - rules
