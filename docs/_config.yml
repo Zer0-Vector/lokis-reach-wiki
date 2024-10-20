@@ -23,14 +23,26 @@ description: >-
 
 # GitHub Pages settings
 domain: zer0-vector.github.io
-url: https://zer0-vector.github.io
+# url: https://zer0-vector.github.io
 github_username: Zer0-Vector
 repository: Zer0-Vector/lokis-reach-wiki
+baseurl: /lokis-reach-wiki
+
+# Plugin settings
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jekyll-relative-links
+whitelist:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jekyll-relative-links
 
 # Build settings
 theme: jekyll-theme-minimal
 show_downloads: false
-baseurl: /lokis-reach-wiki
 permalink: pretty
 defaults:
   - scope:
@@ -38,24 +50,21 @@ defaults:
       type: "pages"
     values:
       layout: default
-  - scope:
-      path: ""
-      type: "district"
-    values:
-      title_prefix: District
 
 collections:
   system:
     output: true
   planet:
     output: true
-  asteroid belt:
+  asteroid-belt:
     output: true
   station:
     output: true
   rules:
     output: true
   species:
+    output: true
+  district:
     output: true
 
 exclude:
