@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-{% seo %}
-{% include fonts.htmf %}
+    {% seo %}
+    {% include fonts.htmf %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
@@ -14,25 +14,24 @@
   <body>
     <div class="wrapper">
       {% include sidebar.htmf %}
-      <main>
+      <main class="content">
         <section>
-          {% if page.title or page.description %}
-            <header>
-              {% if page.title %}
-                <h1>{{ page.title }}</h1>
-                {% assign desc_attr = 'class="subhead"' %}
-              {% endif  %}
-              {% if page.description %}
-                <p {{ desc_attr }}>{{ page.description }}</p>
-              {% endif %}
-              {% if page.tags %}
-                <ul class="tags">
-                  {% for t in page.tags %}
-                    <li>{{ t }}</li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </header>
+          <header>
+            {% if page.title %}
+              <h1>{{ page.title }}</h1>
+              {% assign desc_attr = 'class="subhead"' %}
+            {% endif %}
+            {% if page.description %}
+              <p {{ desc_attr }}>{{ page.description }}</p>
+            {% endif %}
+            {% if page.tags %}
+              <ul class="tags hlist">
+                {% for t in page.tags %}
+                  <li>{{ t }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </header>
           {% if page.categories contains "index" %}
             {% include index-content.htmf %}
           {% endif %}
