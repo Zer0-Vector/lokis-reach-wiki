@@ -16,10 +16,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Loki's Reach Wiki
+title: Loki's Reach
 email: 77898583+Zer0-Vector@users.noreply.github.com
 description: >-
-  Sector information and rules reference.
+  Sector wiki form location information and rules reference.
 
 # GitHub Pages settings
 domain: zer0-vector.github.io
@@ -32,13 +32,9 @@ baseurl: /lokis-reach-wiki
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
-  - jekyll-avatar
-  - jekyll-relative-links
 whitelist:
   - jekyll-redirect-from
   - jekyll-sitemap
-  - jekyll-avatar
-  - jekyll-relative-links
 
 # Build settings
 theme: jekyll-theme-minimal
@@ -47,18 +43,65 @@ permalink: pretty
 defaults:
   - scope:
       path: ""
-      type: "pages"
+      type: pages
     values:
       layout: default
+      regenerate: true
+  - scope:
+      path: ""
+      type: asteroid-belt
+    values:
+      tags:
+        - Point of Interest
+        - Asteroid Belt
+  - scope:
+      path: ""
+      type: system
+    values:
+      tags:
+        - Star System
+  - scope:
+      path: ""
+      type: planet
+    values:
+      tags:
+        - Planet
+  - scope:
+      path: ""
+      type: space-station
+    values:
+      tags:
+        - Point of Interest
+        - Space Station
+  - scope:
+      path: ""
+      type: district
+    values:
+      tags:
+        - District
+  - scope:
+      path: ""
+      type: rules
+    values:
+      tags:
+        - Rules
+  - scope:
+      path: ""
+      type: species
+    values:
+      tags:
+        - Species
 
 collections:
   system:
     output: true
   planet:
     output: true
+  moon:
+    output: true
   asteroid-belt:
     output: true
-  station:
+  space-station:
     output: true
   rules:
     output: true
