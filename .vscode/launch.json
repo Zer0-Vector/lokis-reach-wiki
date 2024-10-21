@@ -8,20 +8,24 @@
       "type": "chrome",
       "request": "launch",
       "name": "Launch Jekyll",
-      "url": "http://localhost:4000/lokis-reach-wiki/",
-      "webRoot": "${workspaceFolder}/docs/_site",
-      "urlFilter": "http://(localhost|127\\.0\\.0\\.1):4000/lokis-reach-wiki/.*",
-      "preLaunchTask": "Start Jekyll",
+      "presentation": {
+        "group": "Jekyll",
+      },
+      // "preLaunchTask": "Start Jekyll",
       "postDebugTask": "Stop Jekyll",
-      "outFiles": [
-        "${workspaceFolder}/docs/_site/**/*"
-      ],
+      "server": {
+        "command": "bundle exec jekyll serve --watch --livereload --safe",
+        "cwd": "${workspaceFolder}/docs",
+        "localRoot": "${workspaceFolder}/docs/_site",
+      },
+      "runtimeArgs": ["--auto-open-devtools-for-tabs"],
+      // "webRoot": "${workspaceFolder}/docs/_site",
+      "url": "http://localhost:4000/lokis-reach-wiki/",
+      "urlFilter": "http://localhost:4000/lokis-reach-wiki/*",
       "cleanUp": "onlyTab",
       "serverReadyAction": {
         "action": "debugWithChrome",
-        "killOnServerStop": false,
-        "webRoot": "${workspaceFolder}/docs/_site",
-        "pattern": "Server address: http://127.0.0.1:([0-9]+).*"
+        "killOnServerStop": true,
       },
     }
   ]
