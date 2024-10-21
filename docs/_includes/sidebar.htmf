@@ -1,29 +1,52 @@
-<header class="side">
-  <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+<div class="sidenav">
+  <header>
+    <h1>
+      <a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a>
+    </h1>
 
-  {% if site.logo %}
-    <img src="{{site.logo | relative_url}}" alt="Logo" />
-  {% endif %}
+    {% if site.logo %}
+      <img src="{{site.logo | relative_url}}" alt="Logo" />
+    {% endif %}
 
-  <p class="subhead">{{ site.description | default: site.github.project_tagline }}</p>
+    <p class="subhead">{{ site.description | default: site.github.project_tagline }}</p>
+  </header>
   {% unless site.collections.size == 0 %}
-    {% assign colls = site.collections |  where_exp: "c","c.output"  %}
-    <hr />
+    {% assign colls = site.collections | map: "label" %}
+    <hr/>
     <nav>
-      <ul>
-        {% for c in colls %}
-          {% if c.label == "posts" %}
-            {% continue %}
-          {% endif %}
-          <li><a href="{{ c.label | relative_url }}">
-          {%- if site.data.collections.labels[c.label] -%}
-            {{ site.data.collections.labels[c.label] }}
-          {%- else -%}
-            {{ c.label | capitalize | append: 's' }}
-          {%- endif -%}
-          </a></li>
-        {% endfor %}
-      </ul>
+      {% comment %} elements of groups is an array of collection names {% endcomment %}
+      {% for g in site.data.collections.groups %}
+        <ul>
+          {% for c in g.members %}
+            {% assign menu_class = "" %}
+            {% assign href = c | append: 's' %}
+            {%- if colls contains c %}
+              {% if site.data.collections.labels[c] %}
+                <!-- has custom label -->
+                {% assign this_label = site.data.collections.labels[c] %}
+              {% else %}
+                <!-- default collection -->
+                {% assign this_label = c | capitalize | append: 's' %}
+              {% endif %}
+            {% else %}
+              <!-- not a collection -->
+              {% assign menu_class = " menubtn" %}
+              {% assign this_label = g[c].title %}
+            {% endif -%}
+            {% if page. %}
+
+            {% endif %}
+
+            {% if site.data.collections.indexes contains c %}
+              {% assign href = site.data.collections.indexes[c] %}
+            {% endif %}
+
+            <li class="navitem{{ menu_class }}">
+              <a href="{{ href | relative_url }}">{{ this_label }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </nav>
   {% endunless %}
-</header>
+</div>
