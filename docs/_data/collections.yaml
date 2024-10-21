@@ -1,12 +1,24 @@
 # Collection overrides/properties
 
-# label overrides (not currently capitalized in template)
+# label overrides
+# Layout uses `collection.name | capitalize` unless a label exists for it here.
+# For nav buttons and titles.
 labels:
   asteroid-belt: Asteroid Belts
+  space-station: Space Stations
   species: Species
   rules: Rules
 
-# collection item prefixes
+# slug overrides
+# Layout uses `collection.name + 's'` unless an override exists here.
+# For top-level collection links
+indexes:
+  species: species
+  rules: rules
+
+
+# collection prefixes
+# Layout appends this to member pages' titles
 prefixes:
   district: District
 
@@ -15,3 +27,15 @@ nomap:
   - district
   - species
   - rules
+
+# nav button groups
+# Layout uses these groups to create separate blocks of the navigation sidebar.
+# `groups.members` should be a collection name or have a corresponding key mapped to a { title, members } object.
+groups:
+  - members: [system, planet, moon]
+  - members: [district, poi]
+    poi:
+      title: Points of Interest
+      members: [asteroid-belt, space-station]
+  - members: [species]
+  - members: [rules]
