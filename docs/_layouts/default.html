@@ -31,6 +31,8 @@
                 </ul>
               {% endif %}
             </header>
+          {% if page.categories contains "index" %}
+            {% include index-content.htmf %}
           {% endif %}
           {{ content }}
         </section>
