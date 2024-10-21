@@ -1,0 +1,7 @@
+<!-- -PAGE- -->
+{% for s in page %}
+  {% if s[0] and s[0] != "" and s[0] != "content" %}
+    <!-- {{ s[0] }} = {{ s[1] }} -->
+  {% endif %}
+{% endfor %}
+<!-- ------ -->
