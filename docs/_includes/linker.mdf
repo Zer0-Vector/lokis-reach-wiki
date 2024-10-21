@@ -1,0 +1,14 @@
+{% assign text = include.text %}
+{% if include.href %}
+  {% assign href = include.href | slugify %}
+{% else %}
+  {% if include.dir %}
+    {% assign dir = include.dir | append: "/" %}
+  {% endif %}
+  {% assign href = text | slugify | prepend: dir %}
+{% endif %}
+
+{% if include.title %}
+  {% assign title = include.title | prepend ' "' | append '"' %}
+{% endif %}
+[{{ text }}]({{ href }}{{ title }})
