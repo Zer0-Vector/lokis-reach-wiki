@@ -11,17 +11,23 @@
       "presentation": {
         "group": "Jekyll",
       },
-      // "preLaunchTask": "Start Jekyll",
+      "preLaunchTask": "Start Jekyll",
       "postDebugTask": "Stop Jekyll",
       "server": {
         "command": "bundle exec jekyll serve --watch --livereload --safe",
         "cwd": "${workspaceFolder}/docs",
-        "localRoot": "${workspaceFolder}/docs/_site",
+        "localRoot": "${workspaceFolder}/docs",
+        "timeout": 5000,
       },
-      "runtimeArgs": ["--auto-open-devtools-for-tabs"],
-      // "webRoot": "${workspaceFolder}/docs/_site",
+      "runtimeArgs": [
+        "--auto-open-devtools-for-tabs"
+      ],
       "url": "http://localhost:4000/lokis-reach-wiki/",
       "urlFilter": "http://localhost:4000/lokis-reach-wiki/*",
+      "trace": {
+        "stdio": true,
+        "logFile": "${workspaceFolder}/~debug-session-log.json",
+      },
       "cleanUp": "onlyTab",
       "serverReadyAction": {
         "action": "debugWithChrome",
