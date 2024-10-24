@@ -18,7 +18,7 @@
   "problemMatcher": {
     "background": {
       "beginsPattern": "^\\s*Jekyll Feed: Generating feed for posts",
-      "endsPattern": "^\\s*\\.\\.\\.done in .+$|^\\s*Error: Run jekyll build --trace .+$",
+      "endsPattern": "done in .+ seconds\\.|^\\s*Error: Run jekyll build --trace .+$",
     },
     "fileLocation": [
       "relative",
@@ -70,8 +70,10 @@
       "label": "Stop Jekyll",
       "detail": "Stops a local Jekyll server",
       "type": "shell",
-      "command": ["\".\\JekyllControl.ps1\"",
-        "-Terminate"],
+      "command": [
+        "\".\\JekyllControl.ps1\"",
+        "-Terminate"
+      ],
       "options": {
         "cwd": "${workspaceFolder}",
         "shell": {
