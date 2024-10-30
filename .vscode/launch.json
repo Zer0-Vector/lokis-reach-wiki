@@ -13,12 +13,12 @@
       },
       "preLaunchTask": "Start Jekyll",
       "postDebugTask": "Stop Jekyll",
-      "server": {
-        "command": "bundle exec jekyll serve --watch --livereload --safe",
-        "cwd": "${workspaceFolder}/docs",
-        "localRoot": "${workspaceFolder}/docs",
-        "timeout": 5000,
-      },
+      // "server": {
+      //   "command": "bundle exec jekyll serve --watch --livereload --safe",
+      //   "cwd": "${workspaceFolder}/docs",
+      //   "localRoot": "${workspaceFolder}/docs",
+      //   "timeout": 5000,
+      // },
       "runtimeArgs": [
         "--auto-open-devtools-for-tabs"
       ],
@@ -29,10 +29,10 @@
         "logFile": "${workspaceFolder}/~debug-session-log.json",
       },
       "cleanUp": "onlyTab",
-      "serverReadyAction": {
-        "action": "debugWithChrome",
-        "killOnServerStop": true,
-      },
+      // "serverReadyAction": {
+      //   "action": "debugWithChrome",
+      //   "killOnServerStop": true,
+      // },
     }
   ]
 }
