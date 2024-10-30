@@ -1,0 +1,13 @@
+{
+  "Convert selection to front matter": {
+    "scope": "markdown,html,liquid",
+    "prefix": "front",
+    "description": "...but it won't correct yaml syntax errors.",
+    "body": ["---","$TM_SELECTED_TEXT$0","---"]
+  },
+  "Add TODO notice": {
+    "scope": "markdown,html,liquid",
+    "prefix": "todo",
+    "body": ["{% include todo.htmf %}"]
+  }
+}
