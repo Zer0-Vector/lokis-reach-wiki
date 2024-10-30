@@ -11,3 +11,9 @@ max_line_length = 136
 
 [*.ps1]
 end_of_line = crlf
+
+[{docs/_includes/*,docs/_layouts/*}]
+insert_final_newline = false
+
+[docs/_layouts/default.html]
+insert_final_newline = true
