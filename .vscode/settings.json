@@ -1,0 +1,77 @@
+{
+  "yaml.schemas": {
+    "./.sheets/swn-character-sheet.schema.json": ".sheets/**/*.yaml",
+    "https://json.schemastore.org/prettierrc.json": ".prettierrc.yaml",
+  },
+  "cSpell.words": [
+    "biopsionics",
+    "dataslab",
+    "homeworld",
+    "metadimension",
+    "metadimensional",
+    "metadimensions",
+    "metatool",
+    "microgravities",
+    "monoblade",
+    "Neako",
+    "orlid",
+    "Phyria",
+    "postech",
+    "pretech",
+    "psionic",
+    "psionics",
+    "psitech",
+    "Sparbnochk",
+    "SWN",
+    "Thran",
+    "undersuit",
+    "xenomorph",
+    "xenomorphs"
+  ],
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/**/*",
+    "**/.git/**/*",
+  ],
+  "svg.preview.background": "dark-transparent",
+  "material-icon-theme.folders.associations": {
+    "docs/_rules": "",
+    "_site/rules": "",
+  },
+  "files.associations": {
+    "*.json.liquid": "liquid-javascript",
+    "*.yaml.liquid": "yaml",
+    "*.md.liquid": "markdown",
+    "*.js.liquid": "liquid-javascript",
+    "*.mjs.liquid": "liquid-javascript",
+    "*.css.liquid": "liquid-css",
+    "*.scss.liquid": "liquid-scss",
+    "**/docs/_layouts/**/*.html": "liquid",
+    "*.htmf": "liquid",
+    "*.mdf": "markdown",
+    "**/docs/*.html": "liquid",
+    "**/*.log.json": "jsonl"
+  },
+  "[liquid]": {
+    "editor.links": false,
+    "editor.formatOnSave": false
+  },
+  "files.readonlyInclude": {
+    "docs/_site/**/*": true,
+    "build/**/*": true,
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/*.code-search": true,
+    "**/docs/_site": true,
+    "**/package-lock.json": true,
+    "**/build": true,
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "[css]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
+}

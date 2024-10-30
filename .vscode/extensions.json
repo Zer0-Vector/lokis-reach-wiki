@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "firefox-devtools.vscode-firefox-debug", // if you use it
+    "DavidAnson.vscode-markdownlint",
+    "streetsidesoftware.code-spell-checker",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "sissel.shopify-liquid",
+    "christian-kohler.npm-intellisense",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "jock.svg",
+    "redhat.vscode-yaml",
+    "gruntfuggly.todo-tree",
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.PowerShell", // there is a .ps1 script, but the extension isn't really needed
+  ]
+}

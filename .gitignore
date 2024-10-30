@@ -4,7 +4,6 @@ todo.txt
 report.txt
 done.txt
 *.todo.txt
-.vscode/settings.json
 
 # session notes
 .notes/
