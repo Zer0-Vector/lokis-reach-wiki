@@ -14,6 +14,9 @@ done.txt
 # character sheets
 .sheets/
 
+# development notes
+.DEV-NOTES/
+
 # style-dictionary build
 build/
 
