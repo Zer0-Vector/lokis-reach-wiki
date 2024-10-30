@@ -1,25 +1,7 @@
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Loki's Reach
+title: Loki's Reach Wiki
 email: 77898583+Zer0-Vector@users.noreply.github.com
-description: >-
-  Sector wiki form location information and rules reference.
+# description: >-
+#   Sector wiki for location information and rules reference.
 
 # GitHub Pages settings
 domain: zer0-vector.github.io
@@ -28,18 +10,28 @@ github_username: Zer0-Vector
 repository: Zer0-Vector/lokis-reach-wiki
 baseurl: /lokis-reach-wiki
 
-# Plugin settings
-plugins:
-  - jekyll-redirect-from
-  - jekyll-sitemap
-whitelist:
-  - jekyll-redirect-from
-  - jekyll-sitemap
+# Custom variables
+wrapper_id: site-wrapper
 
-# Build settings
-theme: jekyll-theme-minimal
-show_downloads: false
-permalink: pretty
+# Site file system settings
+collections:
+  system:
+    output: true
+  planet:
+    output: true
+  moon:
+    output: true
+  asteroid-belt:
+    output: true
+  space-station:
+    output: true
+  rules:
+    output: true
+  species:
+    output: true
+  district:
+    output: true
+
 defaults:
   - scope:
       path: ""
@@ -92,23 +84,27 @@ defaults:
       tags:
         - Species
 
-collections:
-  system:
-    output: true
-  planet:
-    output: true
-  moon:
-    output: true
-  asteroid-belt:
-    output: true
-  space-station:
-    output: true
-  rules:
-    output: true
-  species:
-    output: true
-  district:
-    output: true
+# Build settings
+show_downloads: true
+permalink: pretty
+
+# Plugin settings
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+whitelist:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Markdown rendering options
+kramdown:
+  header_offset: 1 # h1 in *.md will be rendered as h2
+  auto_id_stripping: true
+  transliterated_header_ids: true
+
+# HTTP Headers
+# webrick:
+#   headers:
 
 exclude:
   - Gemfile
