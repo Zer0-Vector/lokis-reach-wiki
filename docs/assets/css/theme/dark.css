@@ -1,0 +1,46 @@
+:root {
+  --lr-sys-color-primary: var(--lr-ref-palette-primary60);
+  --lr-sys-color-primary-compliment: var(--lr-ref-palette-primary-compliment60);
+  --lr-sys-color-secondary: var(--lr-ref-palette-secondary70);
+  --lr-sys-color-secondary-a80: var(--lr-ref-palette-secondary70-a80);
+  --lr-sys-color-secondary-a60: var(--lr-ref-palette-secondary70-a60);
+  --lr-sys-color-secondary-compliment: var(--lr-ref-palette-secondary-compliment60);
+  --lr-sys-color-tertiary: var(--lr-ref-palette-tertiary70);
+  --lr-sys-color-tertiary-compliment: var(--lr-ref-palette-tertiary-compliment80);
+  --lr-sys-color-error: var(--lr-ref-palette-error70);
+  --lr-sys-color-background: var(--lr-ref-palette-black);
+  --lr-sys-color-outline: var(--lr-ref-palette-neutral-variant60);
+  --lr-sys-color-shadow: var(--lr-ref-palette-neutral80);
+  --lr-sys-color-shadow-variant: var(--lr-ref-palette-neutral-variant60);
+  --lr-sys-color-surface: var(--lr-ref-palette-neutral10);
+  --lr-sys-color-surface-a40: var(--lr-ref-palette-neutral10-a40);
+  --lr-sys-color-surface-a20: var(--lr-ref-palette-neutral10-a20);
+  --lr-sys-color-surface-variant: var(--lr-ref-palette-neutral-variant20);
+  --lr-sys-color-surface-tint: var(--lr-ref-palette-primary50);
+  --lr-sys-color-button-text: var(--lr-sys-color-primary);
+  --lr-sys-color-button-text-variant: var(--lr-sys-color-tertiary);
+  /* --lr-sys-color-chip: color-mix(in hsl, var(--lr-sys-color-secondary), var(--lr-sys-color-surface-a20)); */
+  --lr-sys-color-chip: var(--lr-sys-color-secondary-a80);
+  --lr-sys-color-chip-text: var(--lr-sys-color-on-secondary);
+
+  --lr-sys-color-primary-container: var(--lr-ref-palette-primary20);
+  --lr-sys-color-tertiary-container: var(--lr-ref-palette-tertiary30);
+  --lr-sys-color-secondary-container: var(--lr-ref-palette-secondary10);
+  --lr-sys-color-error-container: var(--lr-ref-palette-error30);
+
+  --lr-sys-color-on-primary: var(--lr-ref-palette-primary20);
+  --lr-sys-color-on-secondary: var(--lr-ref-palette-secondary10);
+  --lr-sys-color-on-secondary-inverse: var(--lr-ref-palette-secondary90);
+  --lr-sys-color-on-tertiary: var(--lr-ref-palette-tertiary20);
+  --lr-sys-color-on-background: var(--lr-ref-palette-neutral90);
+  --lr-sys-color-on-error: var(--lr-ref-palette-error20);
+  --lr-sys-color-on-surface: var(--lr-ref-palette-neutral80);
+  --lr-sys-color-on-surface-variant: var(--lr-ref-palette-neutral-variant80);
+  --lr-sys-color-inverse-on-surface: var(--lr-ref-palette-neutral20);
+  --lr-sys-color-on-surface-tint: var(--lr-ref-palette-primary60);
+
+  --lr-sys-color-on-primary-container: var(--lr-ref-palette-primary90);
+  --lr-sys-color-on-secondary-container: var(--lr-ref-palette-secondary90);
+  --lr-sys-color-on-tertiary-container: var(--lr-ref-palette-tertiary90);
+  --lr-sys-color-on-error-container: var(--lr-ref-palette-error80);
+}

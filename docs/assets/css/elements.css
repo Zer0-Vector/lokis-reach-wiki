@@ -1,0 +1,111 @@
+:root {
+  --lr-comp-heading-margin-start: 1.125em;
+}
+
+/* html { */
+  /* font-size: 62.5%; */
+/* } */
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  background-image: linear-gradient(to right, transparent, var(--lr-site-color-bg) var(--lr-site-gutter-left), var(--lr-site-color-bg) var(--lr-site-gutter-right), transparent);
+  background-origin: border-box;
+  background-color: var(--lr-comp-body-color-bg);
+
+  color: var(--lr-comp-body-color-text);
+  font-family: var(--lr-comp-body-font-family);
+  font-size: var(--lr-comp-body-size);
+  font-weight: var(--lr-comp-body-font-weight);
+  font-style: var(--lr-comp-body-font-style);
+  line-height: var(--lr-comp-body-line-height);
+  letter-spacing: var(--lr-comp-body-letter-spacing);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  margin-block-start: var(--lr-comp-heading-margin-start);
+
+  color: var(--lr-comp-heading-color);
+  font-family: var(--lr-comp-heading-font-family);
+  font-weight: var(--lr-comp-heading-font-weight);
+  font-style: var(--lr-comp-heading-font-style);
+  line-height: var(--lr-comp-heading-line-height);
+  letter-spacing: var(--lr-comp-heading-letter-spacing);
+
+}
+
+h1 {
+  font-size: var(--lr-sys-heading-size1);
+  line-height: var(--lr-sys-heading-line-height1);
+}
+
+h2 {
+  font-size: var(--lr-sys-heading-size2);
+  line-height: var(--lr-sys-heading-line-height2);
+}
+
+h3 {
+  font-size: var(--lr-sys-heading-size3);
+  line-height: var(--lr-sys-heading-line-height3);
+}
+
+h4 {
+  font-size: var(--lr-sys-heading-size4);
+  line-height: var(--lr-sys-heading-line-height4);
+}
+
+h5 {
+  font-size: var(--lr-sys-heading-size5);
+  line-height: var(--lr-sys-heading-line-height5);
+}
+
+h6 {
+  font-size: var(--lr-sys-heading-size6);
+  line-height: var(--lr-sys-heading-line-height6);
+}
+
+:is(header, strong) {
+  font-weight: var(--lr-sys-heading-font-weight);
+}
+
+a {
+  --self-link-color: var(--lr-comp-link-color);
+  --self-link-hover-color: var(--lr-comp-link-hover-color);
+  background-image: linear-gradient(
+    to right,
+    var(--self-link-hover-color),
+    var(--self-link-hover-color) 50%,
+    var(--self-link-color) 50%
+  );
+  background-position: 100%;
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  transition: background-position 0.1s ease-in-out 0.08s;
+
+  color: transparent;
+  text-decoration: none;
+  -webkit-text-fill-color: transparent;
+}
+
+main a {
+  font-weight: var(--lr-ref-font-weight-medium);
+}
+
+a:is(:hover, :focus) {
+  background-position: var(--lr-comp-link-hover-background-position);
+}
+
+p {
+  margin-block-start: 1em;
+}
+
+dt, dd {
+  margin-block-start: 0.5em;
+}
+
+
+
+

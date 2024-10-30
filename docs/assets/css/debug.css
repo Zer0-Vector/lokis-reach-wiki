@@ -1,0 +1,47 @@
+:root {
+  --debug-outline-width: 1.5px;
+  --debug-outline-style: dashed;
+  --debug-outline: var(--debug-outline-style) var(--debug-outline-width);
+
+  --debug-bg-tint: #00ffff10;
+}
+
+.debug {
+  &#site-wrapper {
+    outline: #ffff00 var(--debug-outline);
+  }
+
+  * {
+    outline-width: inherit;
+    outline-style: inherit;
+    outline-color: transparent;
+  }
+
+  :is(.header, .footer, .content, .sidebar, .page) {
+    outline: var(--debug-outline);
+    outline-color: var(--debug-self-outline-color);
+
+    background-color: var(--debug-bg-tint);
+
+    .container {
+      outline-color: hsl(from var(--debug-self-outline-color) h - 20 s l)
+    }
+  }
+
+  .header {
+    --debug-self-outline-color: #008000;
+  }
+
+  .footer {
+    --debug-self-outline-color: #0000ff;
+  }
+
+  .content {
+    --debug-self-outline-color: #800080;
+  }
+
+  .sidebar {
+    --debug-self-outline-color: #ff4500;
+  }
+
+}

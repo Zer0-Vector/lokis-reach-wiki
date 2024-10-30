@@ -3,3 +3,138 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=auto");
 @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=auto");
 
+:root {
+  --lr-ref-font-style: unset;
+  --lr-ref-text-decoration: unset;
+  --lr-ref-text-transform: unset;
+
+  /*
+    font-size recommendations
+    ---
+    0.0625rem ~ 1px
+    ...
+    0.75rem   ~ 12px - small
+    0.8125rem ~ 13px
+    0.875rem  ~ 14px - small, button
+    0.9375rem ~ 15px
+    1rem      ~ 16px - normal, button
+    1.0625rem ~ 17px
+    1.125rem  ~ 18px - normal
+  */
+  --lr-ref-font-size: 1.0625rem;
+
+  /*
+    Line height recommendations
+    as ratio of font-size
+    ---
+    Min: 1.2x
+    Ideal: 1.4x - 1.6x
+    Max: 1.8x
+  */
+  --lr-ref-line-height-scale-factor: 1.4;
+  --lr-ref-line-height: calc(var(--lr-ref-line-height-scale-factor) * var(--lr-ref-font-size));
+
+  --lr-ref-font-family-fallback-sans: "Noto Sans", "Helvetica Neue", sans-serif;
+  --lr-ref-font-family-sans-styled: "Orbitron", var(--lr-ref-font-family-fallback-sans);
+  --lr-ref-font-family-sans-styled-variant: "Genos", var(--lr-ref-font-family-fallback-sans);
+  --lr-ref-font-family-sans: "Exo 2", var(--lr-ref-font-family-fallback-sans);
+
+  --lr-ref-font-family-fallback-serif: serif;
+  --lr-ref-font-family-serif: "Noto Serif", var(--lr-ref-font-family-fallback-serif);
+
+  --lr-ref-font-weight-extra-bold: 900;
+  --lr-ref-font-weight-bold: 700;
+  --lr-ref-font-weight-medium: 600;
+  --lr-ref-font-weight-regular: 500;
+  --lr-ref-font-weight-light: 300;
+
+  --lr-sys-chip-font-family: var(--lr-ref-font-family-sans-styled);
+
+  /* Button text */
+  --lr-sys-button-font-family: var(--lr-ref-font-family-sans-styled-variant);
+  --lr-sys-button-font-style: var(--lr-ref-font-style);
+  --lr-sys-button-text-decoration: var(--lr-ref-text-decoration);
+  --lr-sys-button-text-transform: var(--lr-ref-text-transform);
+  --lr-sys-button-line-height: normal;
+  --lr-sys-button-letter-spacing: normal;
+  --lr-sys-button-font-size: var(--lr-sys-body-large-size);
+  --lr-sys-button-weight: var(--lr-ref-font-weight-regular);
+
+
+  /* Small body text: captions, footnotes, etc. */
+  --lr-sys-body-small-font-style: var(--lr-ref-font-style);
+  --lr-sys-body-small-text-decoration: var(--lr-ref-text-decoration);
+  --lr-sys-body-small-text-transform: var(--lr-ref-text-transform);
+  --lr-sys-body-small-line-height: var(--lr-ref-line-height);
+  --lr-sys-body-small-letter-spacing: normal;
+  --lr-sys-body-small-size: calc(0.75 * var(--lr-ref-font-size));
+  --lr-sys-body-small-weight: var(--lr-ref-font-weight-light);
+  --lr-sys-body-small-font-family: var(--lr-ref-font-family-sans);
+
+  /* Body content text */
+  --lr-sys-body-base-font-style: var(--lr-ref-font-style);
+  --lr-sys-body-base-text-decoration: var(--lr-ref-text-decoration);
+  --lr-sys-body-base-text-transform: var(--lr-ref-text-transform);
+  --lr-sys-body-base-line-height: var(--lr-ref-line-height);
+  --lr-sys-body-base-letter-spacing: normal;
+  --lr-sys-body-base-font-size: var(--lr-ref-font-size);
+  --lr-sys-body-base-font-weight: var(--lr-ref-font-weight-light);
+  --lr-sys-body-base-font-family: var(--lr-ref-font-family-sans);
+
+  /* Large body text */
+  --lr-sys-body-large-font-style: var(--lr-ref-font-style);
+  --lr-sys-body-large-text-decoration: var(--lr-ref-text-decoration);
+  --lr-sys-body-large-text-transform: var(--lr-ref-text-transform);
+  --lr-sys-body-large-line-height: var(--lr-ref-line-height);
+  --lr-sys-body-large-letter-spacing: 95%;
+  --lr-sys-body-large-size: calc(1.5 * var(--lr-ref-font-size));
+  --lr-sys-body-large-weight: var(--lr-ref-font-weight-light);
+  --lr-sys-body-large-font-family: var(--lr-ref-font-family-sans);
+
+/* TODO: make scale-factors for body & title text (above) */
+  /* TODO: get style-dictionary to compute scaled properties automatically */
+
+  /* Headings common settings */
+  --lr-sys-heading-letter-spacing: 0;
+  --lr-sys-heading-font-family: var(--lr-ref-font-family-sans-styled);
+  --lr-sys-heading-font-style: var(--lr-ref-font-style);
+  --lr-sys-heading-font-weight: var(--lr-ref-font-weight-medium);
+  --lr-sys-heading-text-decoration: var(--lr-ref-text-decoration);
+  --lr-sys-heading-text-transform: var(--lr-ref-text-transform);
+
+  /* Heading scale factors */
+  --lr-ref-heading-scale-factor1: 2;
+  --lr-ref-heading-scale-factor2: 1.5;
+  --lr-ref-heading-scale-factor3: 1.25;
+  --lr-ref-heading-scale-factor4: 1;
+  --lr-ref-heading-scale-factor5: 0.875;
+  --lr-ref-heading-scale-factor6: 0.75;
+
+  --lr-ref-heading-line-height-scale-factor: 1.0675;
+  --lr-ref-heading-line-height: calc(var(--lr-ref-heading-line-height-scale-factor) * var(--lr-ref-font-size));
+
+  /* Headings scaled settings */
+  --lr-sys-heading-size1: calc(var(--lr-ref-heading-scale-factor1) * var(--lr-ref-font-size));
+  --lr-sys-heading-size2: calc(var(--lr-ref-heading-scale-factor2) * var(--lr-ref-font-size));
+  --lr-sys-heading-size3: calc(var(--lr-ref-heading-scale-factor3) * var(--lr-ref-font-size));
+  --lr-sys-heading-size4: calc(var(--lr-ref-heading-scale-factor4) * var(--lr-ref-font-size));
+  --lr-sys-heading-size5: calc(var(--lr-ref-heading-scale-factor5) * var(--lr-ref-font-size));
+  --lr-sys-heading-size6: calc(var(--lr-ref-heading-scale-factor6) * var(--lr-ref-font-size));
+
+  --lr-sys-heading-line-height1: calc(var(--lr-ref-heading-scale-factor1) * var(--lr-ref-heading-line-height));
+  --lr-sys-heading-line-height2: calc(var(--lr-ref-heading-scale-factor2) * var(--lr-ref-heading-line-height));
+  --lr-sys-heading-line-height3: calc(var(--lr-ref-heading-scale-factor3) * var(--lr-ref-heading-line-height));
+  --lr-sys-heading-line-height4: calc(var(--lr-ref-heading-scale-factor4) * var(--lr-ref-heading-line-height));
+  --lr-sys-heading-line-height5: calc(var(--lr-ref-heading-scale-factor5) * var(--lr-ref-heading-line-height));
+  --lr-sys-heading-line-height6: calc(var(--lr-ref-heading-scale-factor6) * var(--lr-ref-heading-line-height));
+
+  /* Title styles */
+  --lr-sys-title-font-style: var(--lr-ref-font-style);
+  --lr-sys-title-text-decoration: var(--lr-ref-text-decoration);
+  --lr-sys-title-text-transform: var(--lr-ref-text-transform);
+  --lr-sys-title-letter-spacing: 0;
+  --lr-sys-title-font-size: calc(var(--lr-sys-heading-size1) * 1.75);
+  --lr-sys-title-line-height: calc(1.2 * var(--lr-sys-title-font-size));
+  --lr-sys-title-font-weight: var(--lr-ref-font-weight-bold);
+  --lr-sys-title-font-family: var(--lr-ref-font-family-sans-styled);
+}
