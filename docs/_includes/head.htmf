@@ -1,0 +1,8 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+<!-- TODO QUESTION: does this preload actually do anything? -->
+{% assign mainCssHref = "/assets/css/main.css" | relative_url %}
+<link rel="preload"  href="{{ mainCssHref }}" as="style" />
+<link rel="stylesheet" href="{{ mainCssHref }}" />
+
