@@ -1,0 +1,3 @@
+<div class="container">
+  <a href="{{ include.href }}">{{ include.label }}</a>
+</div>

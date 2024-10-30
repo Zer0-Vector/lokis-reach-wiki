@@ -6,3 +6,11 @@
 <link rel="preload"  href="{{ mainCssHref }}" as="style" />
 <link rel="stylesheet" href="{{ mainCssHref }}" />
 
+{% assign initScriptHref = "/assets/js/site-init.js" | relative_url %}
+<script src="{{ initScriptHref }}"></script>
+
+{% if page.name == "404.html" %}
+  <script src="{{ "/assets/js/error.js" | relative_url  }}"></script>
+{% endif %}
+
+<script defer src="{{ "/assets/js/nav.js" | relative_url }}"></script>

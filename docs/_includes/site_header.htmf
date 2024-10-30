@@ -1,0 +1,15 @@
+<div class="container title">
+  <!-- {{ site.github.repository_name }} -->
+  <a href="{{ "/" | absolute_url }}">{{ site.title }}</a>
+</div>
+
+{% if site.logo %}
+  <img
+    src="{{site.logo | relative_url}}"
+    alt="Logo"
+    class="logo" />
+{% endif %}
+
+<p class="description">{{ site.description | default: site.github.project_tagline }}</p>
+
+<!-- TODO: search -->

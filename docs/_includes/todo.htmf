@@ -1,4 +1,4 @@
 <!-- TODO: {{ include.comment | default: page.title }} -->
-<blockquote class="error">
+<blockquote class="error-text">
   Coming soon!
 </blockquote>

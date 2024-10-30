@@ -1,0 +1,6 @@
+<p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
+{% if site.time %}
+  &mdash; Last updated <time datetime="{{ site.time | date_to_xmlschema }}"
+    title="{{ site.time | date_to_rfc822 }}">{{ site.time | date_to_long_string: "ordinal","US" }}</time>
+{% endif %}
+</p>

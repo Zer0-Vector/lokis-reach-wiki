@@ -1,3 +1,7 @@
+---
+includes:
+  header: default/page_header.htmf
+---
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -9,35 +13,40 @@
   </head>
   {% comment %} {% include utils/dumppage.htmf %} {% endcomment %}
   <body>
-    <div class="wrapper">
+    <div id="site-wrapper" class="site wrapper container">
+      <!-- TODO: add skipnav links: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main#skip_navigation -->
+      <header class="site header fill-width">
+        {% include site_header.htmf %}
+      </header>
       {% include sidebar.htmf %}
-      <main class="content">
-        <section>
-          <header>
-            {% if page.title %}
-              <h1>{{ page.title }}</h1>
-              {% assign desc_attr = 'class="subhead"' %}
-            {% endif %}
-            {% if page.description %}
-              <p {{ desc_attr }}>{{ page.description }}</p>
-            {% endif %}
-            {% if page.tags %}
-              <ul class="tags hlist">
-                {% for t in page.tags %}
-                  <li>{{ t }}</li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </header>
-          {% if page.categories contains "index" %}
-            {% include index-content.htmf %}
+      <section id="page-wrapper" class="page wrapper container">
+        {% if layout.includes.header %}
+          {% if layout.header.class %}
+            {% assign hclass = layout.header.class | prepend: " " %}
           {% endif %}
-          {{ content }}
-        </section>
-      </main>
-      {% include footer.htmf %}
+          <!-- TODO RENAME: fill-content => fill-page; content => ""; add 'content' to <section> in _includes/content.htmf -->
+          <header class="page header fill-content{{ hclass }}">
+            {% include {{ layout.includes.header }} %}
+          </header>
+        {% endif %}
+
+        <main id="main-content" class="page content">
+          {% assign stripped = content | strip %}
+          {% if stripped == "" %}
+            {% include todo.htmf %}
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </main>
+
+        {% if layout.includes.footer %}
+          {% include {{ layout.includes.footer }} %}
+        {% endif %}
+
+      </section>
+      <footer class="site footer fill-width container">
+        {% include site_footer.htmf %}
+      </footer>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/nav.js" | relative_url }}"></script>
   </body>
 </html>
