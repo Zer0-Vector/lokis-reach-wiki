@@ -2,6 +2,7 @@
   "yaml.schemas": {
     "./.sheets/swn-character-sheet.schema.json": ".sheets/**/*.yaml",
     "https://json.schemastore.org/prettierrc.json": ".prettierrc.yaml",
+    "https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json": ".markdownlint.yaml",
   },
   "cSpell.words": [
     "biopsionics",
