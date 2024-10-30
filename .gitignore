@@ -15,5 +15,11 @@ done.txt
 # character sheets
 .sheets/
 
-# jekyll temp
-.j/
+# style-dictionary build
+build/
+
+# local-only files
+**/~*
+
+# queue for fixup rebasing
+.fixups
