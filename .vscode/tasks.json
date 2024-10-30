@@ -100,6 +100,7 @@
       "options": {
         "cwd": "${workspaceFolder}/docs"
       },
+      "problemMatcher": [] // FIXME: I think the current one causes the build to hang on success
     }
   ]
 }
