@@ -12,4 +12,4 @@ see: rules/species
 
 # Playable VI "Species"
 
-{% include list-links.htmf %}
+{% include utils/list-links.htmf %}
