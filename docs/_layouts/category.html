@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<!-- hello -->
+{% assign category = page.categories | first %}
+<!-- {{ category }} -->
+{% assign items = site[category] %}
+<!-- {{ items.size }} -->
+<aside id="category-items" class="children">
+  <ul>
+    {% for item in items %}
+      <li>{% include utils/linker.htmf href=item.url text=item.title %}</li>
+      <!-- {{ item.title }} @ {{ item.url }} -->
+    {% endfor %}
+  </ul>
+</aside>
+<article>
+  {{ content }}
+</article>
