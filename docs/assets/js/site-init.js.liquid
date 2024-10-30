@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: assets/js/site-init.js
+regenerate: true
+---
+"use strict";
+
+{% include_relative _site.d.js %}
+
+this.site = new Site({
+  project: "{{ site.github.repository_name }}",
+  redirects: {["{{ site.baseurl }}"]: "{{ site.baseurl | append: "/" }}"},
+  wrapper_id: "{{ site.wrapper_id }}",
+});
+
+{% include_relative _site-init.js %}
