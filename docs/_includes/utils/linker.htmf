@@ -1,0 +1,9 @@
+{%- assign href = include.href | default: include.text  -%}
+{% unless href %}
+  {%- assign dir = include.dir | append: "/" -%}
+  {% assign href = include.text | slugify | prepend: dir %}
+{% endunless %}
+{%- if include.title -%}
+  {%- assign title = include.title | prepend 'title="' | append '"' -%}
+{%- endif -%}
+<a href="{{ href | relative_url }}" {{ title }}>{{ include.text }}</a>
