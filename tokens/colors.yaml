@@ -1,0 +1,74 @@
+colors:
+  $type: color
+  ref:
+    black:
+      $value: "#000f"
+    white:
+      $value: "#ffff"
+    primary:
+      base:
+      inverted:
+    secondary:
+      base:
+      inverted:
+    neutral:
+      base:
+        # Eerie Black: 1C2121
+        # Snow: FDF9F8
+        comment: >-
+          'Eerie Black' to 'Snow'
+        # 0:
+        #   $value: "{colors.ref.black}"
+        10:
+          $value: "#1c2121ff"
+        20:
+          $value: "#393c3cff"
+        30:
+          $value: "#474a4aff"
+        40:
+          $value: "#555757ff"
+        50:
+          $value: "#717272ff"
+        60:
+          $value: "#8d8d8dff"
+        70:
+          $value: "#a9a8a8ff"
+        80:
+          $value: "#c5c3c3ff"
+        90:
+          $value: "#e1dedeff"
+        95:
+          $value: "#fdf9f8ff"
+        99:
+          $value: "#fefcfbff"
+        # 100:
+        #   $value: "{colors.ref.white}"
+      variant:
+        # Liver: 62493F
+        # Buff: D99E63
+        # 0:
+        #   $value: "{colors.ref.black}"
+        10:
+          $value: "#1c2121ff"
+        20:
+          $value: "#393c3cff"
+        30:
+          $value: "#474a4aff"
+        40:
+          $value: "#555757ff"
+        50:
+          $value: "#717272ff"
+        60:
+          $value: "#8d8d8dff"
+        70:
+          $value: "#a9a8a8ff"
+        80:
+          $value: "#c5c3c3ff"
+        90:
+          $value: "#e1dedeff"
+        95:
+          $value: "#fdf9f8ff"
+        99:
+          $value: "#fefcfbff"
+        # 100:
+        #   $value: "{colors.ref.white}"
