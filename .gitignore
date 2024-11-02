@@ -5,23 +5,11 @@ report.txt
 done.txt
 *.todo.txt
 
-# session notes
 .notes/
-
-# previous experiments
 .archive/
-
-# character sheets
 .sheets/
-
-# development notes
 .DEV-NOTES/
-
-# style-dictionary build
 build/
 
-# local-only files
 **/~*
-
-# queue for fixup rebasing
 .fixups
