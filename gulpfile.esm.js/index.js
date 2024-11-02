@@ -1,7 +1,5 @@
 import { src, dest } from "gulp";
-import flog from "fancy-log";
-import { parseArgs } from "./args";
-import tinycolor from "tinycolor2";
+import log from "fancy-log";
 
 const readEnv = (varname) => {
   return new Promise((resolve, reject) => {
@@ -21,11 +19,12 @@ export const deployStyles = async () => {
   const sd = await readEnv("STYLED_BUILD_ROOT");
   const jekyllAssets = await readEnv("JEKYLL_ASSETS_DIR");
   // console.log("env: ", process.env);
-  flog.info(`Copying styles: ${sd} --> ${jekyllAssets}`);
-  return src(`${sd}/*`, { bash: true }).pipe(dest(jekyllAssets));
+  log(`Copying styles: ${sd} --> ${jekyllAssets}`);
+  return src(`${sd}/*`).pipe(dest(jekyllAssets));
 };
 deployStyles.displayName = "deploy-styles";
 
 export * from "./shades";
 export * from "./convert";
 export * from "./invert-color";
+export * from "./desaturate";

@@ -6,11 +6,12 @@ const asArray = (maybeArray) => {
 };
 
 /**
- * @param {...string} required
+ * @param {string[]} [required = []]
+ * @param {...string} optional
  * @returns {{ [key: string]: string[] }}
  */
-export const parseArgs = (...required) => {
-  const args = mini(process.argv.slice(2), { string: ["color"] });
+export const parseArgs = (required = [], ...optional) => {
+  const args = mini(process.argv.slice(2), { string: [...required, ...optional] });
   const keys = Object.getOwnPropertyNames(args);
   for (const key of keys.filter((k) => k !== "--" && k !== "_")) {
     info("with arg", { [key]: args[key] });
