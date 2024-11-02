@@ -11,7 +11,8 @@
     "clean": "env-cmd --silent -x style-dictionary clean --config $npm_package_config_sdconfig",
     "build": "npm run clean && npm run compile",
     "deploy": "env-cmd gulp deploy-styles",
-    "env": "env-cmd env"
+    "env": "env-cmd env",
+    "lint": "eslint"
   },
   "author": "Zer0-Vector <77898583+Zer0-Vector@users.noreply.github.com>",
   "license": "MIT",
@@ -31,7 +32,6 @@
     "eslint": "^9.13.0",
     "esm": "^3.2.25",
     "fancy-log": "^2.0.0",
-    "globals": "^15.11.0",
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
     "handlebars": "^4.7.8",

@@ -1,4 +1,3 @@
-import globals from "globals";
 import pluginJs from "@eslint/js";
 
 /** @type {import("eslint").Linter.Config} */
@@ -8,12 +7,11 @@ const commonConfig = {
     reportUnusedDisableDirectives: "warn",
   },
   languageOptions: {
+    globals: {
+      console: true,
+    },
     parserOptions: {
       ecmaVersion: 2022,
-      ecmaFeatures: {
-        impliedStrict: true,
-        globalReturn: false,
-      },
     },
   },
 };
@@ -21,10 +19,14 @@ const commonConfig = {
 /** @type {import("eslint").Linter.Config} */
 const webConfig = {
   name: "lrwiki-web",
-  files: ["docs/**/*.{js,mjs,cjs}"],
+  files: ["docs/**/*.js"],
   languageOptions: {
     globals: {
-      ...globals.browser,
+      document: true,
+      window: true,
+      URL: true,
+      URLSearchParams: true,
+      MouseEvent: true,
     },
     parserOptions: {
       sourceType: "script",
@@ -35,10 +37,10 @@ const webConfig = {
 /** @type {import("eslint").Linter.Config} */
 const toolsConfig = {
   name: "lrwiki-tools",
-  files: ["./*.{js,mjs}", "gulpfile.{js,esm.js}/**/*.{js,mjs}", "tokens/index.mjs"],
+  files: ["*.mjs", "*.js", "gulpfile.esm.js/*.js", "tokens/index.mjs"],
   languageOptions: {
     globals: {
-      ...globals.node,
+      process: true,
     },
     parserOptions: {
       sourceType: "module",
