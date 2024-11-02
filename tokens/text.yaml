@@ -1,0 +1,52 @@
+text:
+  fonts:
+    serif:
+      $type: fontFamily
+      fallback:
+        $value: Noto Serif, Times New Roman, serif
+    sans:
+      $type: fontFamily
+      fallback:
+        $value: Noto Sans, Open Sans, sans-serif
+      sleek:
+        $value: Exo 2, '{text.fonts.sans}'
+      futurist:
+        $value: Orbitron, '{text.fonts.sans}'
+      odd:
+        $value: Genos, '{text.fonts.sans}'
+  sizes:
+    $type: fontSize
+    heading:
+      $value: '{dimensions.30}'
+    body:
+      $value: '{dimensions.17}'
+  weights:
+    $type: fontWeight
+    light:
+      $value: 200
+    regular:
+      $value: 400
+    bold:
+      $value: 700
+    extra-bold:
+      $value: 900
+  lineHeights:
+    $type: number
+    normal:
+      $value: 1.3
+    large:
+      $value: 1.6
+  typography:
+    $type: typography
+    heading:
+      $value:
+        fontFamily: '{text.fonts.sans.futurist}'
+        fontWeight: '{text.weights.bold}'
+        fontSize: '{text.sizes.heading}'
+        lineHeight: '{text.lineHeights.large}'
+    body:
+      $value:
+        fontFamily: '{text.fonts.sans.sleek}'
+        fontWeight: '{text.weights.regular}'
+        fontSize: '{text.sizes.body}'
+        lineHeight: '{text.lineHeights.normal}'

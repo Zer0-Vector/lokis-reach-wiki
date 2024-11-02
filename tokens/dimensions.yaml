@@ -1,0 +1,57 @@
+# "dimension" keys reflect the font size they're "supposed" to emulate.
+dimensions:
+  $type: dimension
+  "4":
+    # $value: 4px
+    $value: 0.25rem
+  "8":
+    # $value: 8px
+    $value: 0.5rem
+  "12":
+    # $value: 12px
+    $value: 0.75rem
+  "16":
+    # $value: 16px
+    $value: 1rem
+  "17":
+    # $value: 17px
+    $value: 1.0625rem
+  "18":
+    # $value: 18px
+    $value: 1.125rem
+  "20":
+    # $value: 20px
+    $value: 1.25rem
+  "24":
+    # $value: 24px
+    $value: 1.5rem
+  "28":
+    # $value: 28px
+    $value: 1.75rem
+  "30":
+    # $value: 30px
+    $value: 1.875rem
+  "32":
+    # $value: 32px
+    $value: 2rem
+  "36":
+    # $value: 36px
+    $value: 2.25rem
+  "40":
+    # $value: 40px
+    $value: 2.5rem
+  "44":
+    # $value: 44px
+    $value: 2.75rem
+  "48":
+    # $value: 48px
+    $value: 3rem
+  "52":
+    # $value: 52px
+    $value: 3.25rem
+  "56":
+    # $value: 56px
+    $value: 3.5rem
+  "60":
+    # $value: 60px
+    $value: 3.75rem
