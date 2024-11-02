@@ -1,3 +1,4 @@
 trailingComma: es5
+semi: true
 bracketSameLine: true
 endOfLine: auto

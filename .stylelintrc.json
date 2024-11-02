@@ -4,7 +4,7 @@
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
   "defaultSeverity": "warning",
-  "plugins": ["stylelint-order", "stylelint-prettier"],
+  "plugins": ["stylelint-order"],
   "overrides": [],
   "rules": {
     "comment-empty-line-before": null,
@@ -15,7 +15,6 @@
     "number-max-precision": 5,
     "alpha-value-notation": null,
     "hue-degree-notation": null,
-    "prettier/prettier": true,
     "declaration-empty-line-before": [
       "never",
       {
